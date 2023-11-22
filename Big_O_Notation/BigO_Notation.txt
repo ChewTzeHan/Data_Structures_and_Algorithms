@@ -1,0 +1,9 @@
+Task 0: The complexity for this code is O(1) as only the first and last elements of the text and call lists have to be accessed
+
+Task 1: The complexity for this code is O(n) as the code iterates through the records once to check if its in the unique list where n is the number of rows in the lists text and call
+
+Task 2: The complexity for this code is similarly O(n) as it iterates through the same records once to add and calculate the total time where n is the number of rows in the lists text and call
+
+Task 3: The complexity for this code is O(n), iterating through the call list once where n is the number of rows.
+
+Task 4: The complexity for this code is O(n), iterating through the call list twice and the text list once where n is the number of rows. 
