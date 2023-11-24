@@ -43,7 +43,7 @@ for row in texts: #Filter out numbers that send/receive texts
 
 
 print("These numbers could be telemarketers: ")
-print(*marketers, sep='\n')
+print(*sorted(marketers), sep='\n')
 
 
 

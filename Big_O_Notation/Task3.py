@@ -51,33 +51,45 @@ BangFixed = []
 
 for row in calls: #Iterate over all sending calls and check if has (080)
     if "(080)" in row[0]:
-        if row[0] not in BangFixed:
-            BangFixed.append(row[0])
+        if "(" in row[1]: # fixed lines
+            code = (str(row[1]).split(')')[0] + ')')
+            if code not in BangFixed:
+                BangFixed.append(code)
+                
+        #mobile numbers
+        if '7' in str(row[1])[0] or '8' in str(row[1])[0] or '9' in str(row[1])[0]:
+            code = str(row[1])[0:4]
+            if code not in BangFixed:
+                BangFixed.append(code)
+            
+        #telemarketers
+        if row[1].startswith('140'):
+            code = str(row[1])[0:3]
+            if code not in BangFixed:
+                BangFixed.append(code)
+        
+        
     
-    if "(080)" in row[1]: #Similarly with receiving calls
-        if row[1] not in BangFixed:
-            BangFixed.append(row[1])
+
 
 
 print("The numbers called by people in Bangalore have codes:")
-print(*BangFixed, sep="\n")
+print(*sorted(BangFixed), sep="\n")
 
 #B -------------------------------------------
 
 
-BangToBang = 0
-BangToNotBang = 0
+count1 = 0
+count2 = 0
 
 for row in calls: #Sum all calls sent and received by Bangaloreans
-    if "(080)" in row[0] and "(080)" in row[1]:
-        BangToBang += 1
-    
-    #Sum calls sent to but not received by Bangaloreans
-    if "(080)" in row[0] and "(080)" not in row[1]:
-        BangToNotBang += 1
+    if "(080)" in row[0]:
+        count1 += 1
+        if "(080)" in row[1]:
+            count2 += 1
 
 
-callperc = BangToBang / BangToNotBang * 100
+callperc = count2 / count1 * 100
     
 
 print("\n{perc:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore."

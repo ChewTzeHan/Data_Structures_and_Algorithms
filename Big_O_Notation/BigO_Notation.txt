@@ -1,9 +1,10 @@
 Task 0: The complexity for this code is O(1) as only the first and last elements of the text and call lists have to be accessed
 
-Task 1: The complexity for this code is O(n) as the code iterates through the records once to check if its in the unique list where n is the number of rows in the lists text and call
+Task 1: The complexity for this code is O(n^2) as the code iterates with a for loop twice, being 2O(n). each for loop has 2 if statements, [O(n) + O(n)] which when combined with the for loop becomes 2O(n) [O(n) + O(n)], rounding down to 2O(n^2) and thus having a complexity of O(n^2) 
 
-Task 2: The complexity for this code is similarly O(n) as it iterates through the same records once to add and calculate the total time where n is the number of rows in the lists text and call
+Task 2: The complexity for this code is O(n^2) there is a for loop with 4 if statements for O(n) [O(n) * 4], rounding to O(n^2) as well as another for loop with another if statement for O(n)[O(n)] = O(n^2). Both together total to 2O(n^2) which can be intepreted as O(n^2)
 
-Task 3: The complexity for this code is O(n), iterating through the call list once where n is the number of rows.
+Task 3: The complexity for this code is O(n^4), the rows of the calls spreadsheet are iterated through once, O(n) and checked 3 times with if statements, each nested within each other for a total of O(n) [O(n)] {O(n)} [O(n)], leading to O(n^4) as the worst case Big O
 
-Task 4: The complexity for this code is O(n), iterating through the call list twice and the text list once where n is the number of rows. 
+
+Task 4: The complexity for this code is O(n^2), the rows in calls or text are iterated through once and then checked by a single if statement in all instances, leading to O(n) [O(n)] as O(n^2)

@@ -26,9 +26,9 @@ longest_num = 0
 
 for row in calls: #Add in any new unique tel no.
     if row[0] not in timespent:
-        timespent.update({row[0]: int(row[3])})
+        timespent.update({row[0]: 0})
     if row[1] not in timespent:
-        timespent.update({row[1]: int(row[3])})
+        timespent.update({row[1]: 0})
         
         #Add time to existing tel no.
     if row[0] in timespent:

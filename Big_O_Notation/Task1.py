@@ -28,11 +28,11 @@ for row in texts: #All unique numbers in texts
         textunique.append(row[1])
 
 for row in calls: #All unique numbers in calls
-    if row[0] not in textunique:
+    if row[0] not in callunique:
         callunique.append(row[0])
-    if row[1] not in textunique:
+    if row[1] not in callunique:
         callunique.append(row[1])
 
 
 print("There are {count} different telephone numbers in the records."
-      .format(count = (len(textunique) + len(callunique))))
+      .format(count = len(set(textunique + callunique))))
