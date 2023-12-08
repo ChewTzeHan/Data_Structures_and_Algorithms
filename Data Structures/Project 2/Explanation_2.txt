@@ -1,0 +1,6 @@
+A basic list is used for tracking all files ending with the suffix along with their paths. A list allows ease of appending values to it using python's append function. No sorting is required for the return value. 
+
+Recursion is used to help look through the directory given. If a folder is found, the path towards the folder is passed recursively back into the function. If a file is found, it is checked for the correct suffix and added to the list along with its path if it matches, breaking the recursion in both cases.
+
+
+The time complexiy of is O(n). The amount of times the check_suffix function is called is directly affected by the size of the directory provided as the for loop iterates over every possible subfolder and file within the directory once. Additionally, the returned list is iterated over to print each individual file found seperately. 

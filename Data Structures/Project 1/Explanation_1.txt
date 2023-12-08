@@ -1,0 +1,10 @@
+The elements are stored in a list as elements that are added to the cache come with a key and a value, thus a
+dictionary will be able to keep track of both and access the value when given the key in the get operation.
+
+A priority list uses a list to set the priority within the cache. This list holds keys within the dictionary. 
+The list is sorted as a queue to utilise its FIFO method. The first key that is added to the list in the set operation will be the first removed. Any key that is accessed using the get operation will be sent to the back of the queue as the 'newest' key in the list.
+The python list is used in this case due to the functions such as append, remove and insert that allow easy control of changing the key priorities within the list.
+
+The time complexity for this problem is O(1). As a priority list is used, when a key needs to be removed when setting a new key and the cache has reached its maximum size, its always the first index of the list that is dequeued. Similarly, resetting the priority of a key always sets it to the last index of the list. No iterating over the list is required and thus it has a constant time complexity.
+
+

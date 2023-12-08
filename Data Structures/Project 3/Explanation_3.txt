@@ -1,0 +1,21 @@
+A priority queue is used with a python list to track the characters and their frequency. A python list is used as the built in sorted() function can be used to easily sort the characters by frequency, producing a priority queue. 
+
+
+A tree is used for keeping track of the binary strings assosciated with each character in the input. Each tree's treenode is an object consisting of a left and right to track the children, with left being 0 and right being 1 in the binary string for encoding. 
+
+A dictionary is uesd to track each character with their assosciated binary string. A dictionary allows for each character to be appended as key with a value of their binary string and can be iterated through to produce an encoded string. 
+
+
+
+The time complexity is O(n^2). The initial input is iterated through twice seperately, once to count the frequency and once to sort, this is O(2n). 
+
+Tree_maker() iterates through the sorted input list multiple times based on the length of the list and then sorts the values again, this is O(n^2). 
+
+Encoding the input into a binary string uses recursion to iterate through the tree until it finds a leaf node, this is O(n). 
+
+Another iteration through the input data is used to convert it using the dictionary of binary string values to produce the binary output, this is O(n).
+
+Lastly, decoding iterates through the tree again to find a leaf node while tracking the binary string, this is O(n)
+
+In total, O(2n) + O(n^2) + O(n) + O(n) + O(n) = O(5n) + O(n^2) rounding to O(n^2)
+

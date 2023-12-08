@@ -1,0 +1,6 @@
+The Block is an object with timestamp, data, previous hash, hash and next values. The first 4 are for providing information about the block while the last is for identifying the next block in the blockchain linked list.
+
+The linked_list is a linked list object with a head for identifying the start of the blockchain. As the blocks are linked with each other with the .next value provided in the block object, no next value is needed for the linked list. Only the head needs to be kept track of to know where the linked list starts to be able to iterate through the blocks. 
+
+
+The time complexity is O(n). When adding a new block, as there is no tail in the linked list, the entire linked list of blocks needs to be iterated through to find the end where an empty .next is available for the next block, resulting in O(n). Similarly, showing the entire chain prints out the information values of each block by iterating through the entire linked list, this has a complexity of O(n). O(n) + O(n) = O(2n) rounded to a time complexity of O(n)

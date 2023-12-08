@@ -1,0 +1,10 @@
+The Group object is used with a name value to identify itself as well as a groups and users list.
+
+Python lists are used for both of these for use of the append function to add new values and for iterating through each individual group and user associated with the parent group.
+
+The function to find if a user is in a group uses recursion. It recursively enters subgroups within the initial provided group and breaks when it manages to find the user within any of the subgroups. 
+
+
+The time complexity is O(n).
+
+The amount of times is_user_in_group is called is directly affected by the size of the group arg provided. It iterates through the group and users list once each to check if there is a subgroup or if the user matches the argument respectively. This is a time complexity of O(2n), rounding down to O(n)

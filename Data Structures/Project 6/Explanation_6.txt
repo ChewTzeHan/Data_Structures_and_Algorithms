@@ -1,0 +1,21 @@
+A linked list is used to hold the elments for union and intersection as is required in the question. 
+
+Each node in the linked list has its own value and a next to indicate the next node in the linked list. 
+
+A python list is used in both union and intersection functions to make use of the append and in function for easier iterating through the elements before turning it into a linked list. 
+
+
+The time complexity is O(n^3).
+
+In the union function, linkedlist1 is iterated through once and each value is checked by iterating through the new union list, resulting in O(n^2). 
+It does this again for the elements in linkedlist2, through each value in union list, resulting in another O(n^2).
+Union list is then iterated through to use the append function on the linkedlist. The append function also iterates through the entire linkedlist object as there is no tail tracked, this results in O(n^2)
+
+For union, the time complexity is O(n^2) * 3, rounded off to O(n^2)
+
+For the intersection function, linkedlist1 is iterated through once and each value in the linkedlist is checked with every value in the intersection list, iterated through once. Each value in linkedlist2 is then iterated through and compared with the value in linkedlist1 if it is an intersecting value. In total, there are 3 iterations and thus results in O(n^3).
+The intersection list is similarly iterated through and each value appended to a new intersection linkedlist for a time complexity of O(n^2)
+
+For Intersection, the time complexity is O(n^2) + O(n^3) rounded off to O(n^3)
+
+Thus the total time complexity for both functions is O(n^2) + O(n^3) rounded off to O(n^3)
