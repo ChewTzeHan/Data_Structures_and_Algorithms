@@ -1,0 +1,10 @@
+The function initially uses quicksort to sort the input list. Quicksort has a time complexity of O(n log n).
+
+Afterwards, the input list is iterated once through all its values to add to the 2 sums, a time complexity of O(n).
+
+O(n log n) + O(n) = O(n log n)
+
+Thus the time complexity is O(n log n)
+
+
+The space complexity is O(1) as there are no additional data structures used that change based on input size. The same input list is used before and after sorting for a constant space ecomplexity.

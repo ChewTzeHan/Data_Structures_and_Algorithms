@@ -1,0 +1,14 @@
+The Trie data structure is used here to make use of the TrieNode that can have a dictionary of children able to hold an alphabet followed by a TrieNode that corresponds to that alphabet, creating a tree-like data structure that can effeciently store data on words to be used later in the autocorrecting function. 
+
+The TrieNodes also have an is_word to use as identification of a full word. 
+
+
+Inserting a word into the prefix Trie iterates through the entire Trie with each individual character of the string. With n being the size of the string, Inserting into a Trie has a time complexity of O(n)
+
+Similarly, searching uses recursion to go down the Trie, searching all the children/leaves until it finds the is_word to identify the ending and successful search of the word. This also has a time complexity of O(n)
+
+O(n) + O(n) = O(n)
+
+Thus the time complexity of a prefix Trie is O(n)
+
+The space complexity directly affected by the size of the input string that needs to be added to the Trie, thus the space complexity of a prefix Trie is O(n)

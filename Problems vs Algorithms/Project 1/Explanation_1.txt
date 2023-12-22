@@ -1,0 +1,1 @@
+Both the time and space complexity are O(1) as there is no additional data structure used and the input is an integer, thus size n cannot be increased unlike an array.

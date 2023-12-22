@@ -1,0 +1,10 @@
+The initial pivot is found using binary search, which has a time complexity of O(log n)
+
+Afterwards, the index of the given input number is again searched using binary search using an array seperated by the pivot, another O(log n)
+
+O(log n) + O(log n) = O(2log n), rounded to O(log n)
+
+Thus the time complexity is O(log n).
+
+
+The space complexity is O(1) as there are no additional data structures used in the function that will change depending on the input size.

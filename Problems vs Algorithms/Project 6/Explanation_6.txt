@@ -1,0 +1,3 @@
+The function iterates through the list of integers once, comparing each iteration with a set high and low variable and changing if needed. This has a time complexity of O(n)
+
+The high and low variables used here are constant and do not change based on input size, thus the space complexity is O(1)

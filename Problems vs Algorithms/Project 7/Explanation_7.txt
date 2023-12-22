@@ -1,0 +1,14 @@
+The Trie data structure is used here as a RouteTrieNode is able to hold children of path names with their associated nodes for identification during search. It can effeciently keep path strings using the children dictionary and have a handler to identify the handler for searching.
+
+Inserting into the RouteTrie is based on the size of the path given as n. The path is split and each section seperated by "/" uses an iteration through the trie to insert into its designated location. This uses a time complexity of O(n)
+
+Searching through the RouteTrie has the same concept of the path splitting and iterating through the Trie to find the correct children node and eventually find a handler. This has a time complexity of O(n)
+
+O(n) + O(n) = O(n)
+
+The time complexity for this is O(n)
+
+
+The amount of nodes added into the RouteTrie is directly affected by the size of the path. Thus the space complexity of adding the nodes to the RouteTrie is O(n).
+
+The space complexity is O(n)
